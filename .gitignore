@@ -1,0 +1,31 @@
+# --- Python ---
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# --- Datos: NO se suben (licencia del dataset oficial vacia). Se bajan con scripts/download_data.py ---
+data/raw/*
+data/interim/*
+data/processed/*
+!data/raw/.gitkeep
+!data/interim/.gitkeep
+!data/processed/.gitkeep
+# ...pero las huellas SI se suben:
+!data/SHA256SUMS.txt
+
+# --- Modelos entrenados (pesan mucho) ---
+models/*.joblib
+models/*.pt
+models/*.bin
+
+# --- Secretos ---
+.env
+
+# --- Editor / sistema ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

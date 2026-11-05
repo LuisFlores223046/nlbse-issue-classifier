@@ -1,0 +1,14 @@
+# Dependencias MINIMAS del equipo (Python 3.11 recomendado).
+# Instalar:  pip install -r requirements.txt
+# Despues de que todo funcione, Luis congela versiones:  pip freeze > requirements.lock.txt
+pandas
+numpy
+scikit-learn
+joblib
+matplotlib
+seaborn
+jupyter
+fastapi
+uvicorn
+httpx
+pytest

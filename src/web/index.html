@@ -1,0 +1,40 @@
+<!doctype html>
+<!-- Mini interfaz para la demo (Luis). Abrir con la API corriendo en http://127.0.0.1:8000 -->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Clasificador de issues</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 640px; margin: 2rem auto; padding: 0 1rem; }
+    input, textarea, select, button { width: 100%; margin: .4rem 0; padding: .5rem; font: inherit; box-sizing: border-box; }
+    #out { margin-top: 1rem; padding: 1rem; border: 1px solid #ccc; border-radius: 8px; white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+  <h1>Clasificador de issues de GitHub</h1>
+  <input id="title" placeholder="Titulo del issue">
+  <textarea id="body" rows="6" placeholder="Cuerpo del issue"></textarea>
+  <select id="repo">
+    <option>facebook/react</option><option>tensorflow/tensorflow</option>
+    <option>microsoft/vscode</option><option>bitcoin/bitcoin</option><option>opencv/opencv</option>
+  </select>
+  <button onclick="clasificar()">Clasificar</button>
+  <div id="out">Aqui aparecera el resultado.</div>
+  <script>
+    // Envia el formulario a la API (POST /predict) y muestra la respuesta.
+    async function clasificar() {
+      const payload = {
+        title: document.getElementById('title').value,
+        body: document.getElementById('body').value,
+        repo: document.getElementById('repo').value,
+      };
+      const r = await fetch('http://127.0.0.1:8000/predict', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      document.getElementById('out').textContent = JSON.stringify(await r.json(), null, 2);
+    }
+  </script>
+</body>
+</html>
