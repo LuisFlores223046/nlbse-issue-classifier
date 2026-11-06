@@ -29,3 +29,6 @@ models/*.bin
 .idea/
 .DS_Store
 Thumbs.db
+
+# --- Predicciones fila por fila: contienen titulos del dataset (licencia vacia) -> no se suben ---
+reports/errores/pred_*.csv
