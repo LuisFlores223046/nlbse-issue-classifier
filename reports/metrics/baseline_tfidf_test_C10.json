@@ -1,0 +1,72 @@
+{
+  "modelo": "baseline_tfidf_test_C10",
+  "por_repo": {
+    "bitcoin/bitcoin": {
+      "f1_macro": 0.717344799555042,
+      "f1_bug": 0.6666666666666666,
+      "f1_feature": 0.8061224489795918,
+      "f1_question": 0.6792452830188679,
+      "precision_bug": 0.6956521739130435,
+      "precision_feature": 0.8229166666666666,
+      "precision_question": 0.6428571428571429,
+      "recall_bug": 0.64,
+      "recall_feature": 0.79,
+      "recall_question": 0.72
+    },
+    "facebook/react": {
+      "f1_macro": 0.8074508094846092,
+      "f1_bug": 0.9222797927461139,
+      "f1_feature": 0.7850467289719626,
+      "f1_question": 0.7150259067357513,
+      "precision_bug": 0.956989247311828,
+      "precision_feature": 0.7368421052631579,
+      "precision_question": 0.7419354838709677,
+      "recall_bug": 0.89,
+      "recall_feature": 0.84,
+      "recall_question": 0.69
+    },
+    "microsoft/vscode": {
+      "f1_macro": 0.7205882352941178,
+      "f1_bug": 0.7058823529411765,
+      "f1_feature": 0.7058823529411765,
+      "f1_question": 0.75,
+      "precision_bug": 0.7586206896551724,
+      "precision_feature": 0.6446280991735537,
+      "precision_question": 0.782608695652174,
+      "recall_bug": 0.66,
+      "recall_feature": 0.78,
+      "recall_question": 0.72
+    },
+    "opencv/opencv": {
+      "f1_macro": 0.7361351537593616,
+      "f1_bug": 0.6444444444444445,
+      "f1_feature": 0.8059701492537313,
+      "f1_question": 0.7579908675799086,
+      "precision_bug": 0.725,
+      "precision_feature": 0.801980198019802,
+      "precision_question": 0.6974789915966386,
+      "recall_bug": 0.58,
+      "recall_feature": 0.81,
+      "recall_question": 0.83
+    },
+    "tensorflow/tensorflow": {
+      "f1_macro": 0.8353427789157997,
+      "f1_bug": 0.8704663212435233,
+      "f1_feature": 0.8541666666666666,
+      "f1_question": 0.7813953488372093,
+      "precision_bug": 0.9032258064516129,
+      "precision_feature": 0.8913043478260869,
+      "precision_question": 0.7304347826086957,
+      "recall_bug": 0.84,
+      "recall_feature": 0.82,
+      "recall_question": 0.84
+    }
+  },
+  "f1_promedio_repos": 0.763372355401786,
+  "n": 1500,
+  "C": 10.0,
+  "class_weight": null,
+  "seed": 42,
+  "split": "test",
+  "model_version": "0.1.0"
+}
