@@ -1,0 +1,8 @@
+{
+  "modelo": "fuga_sin_plantilla",
+  "f1_promedio_con_plantilla": 0.7294495322495872,
+  "f1_promedio_sin_encabezados": 0.7171563341924097,
+  "seed": 42,
+  "split": "valid",
+  "nota": "experimento propio; no es el modelo oficial"
+}
