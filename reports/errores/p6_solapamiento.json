@@ -1,0 +1,6 @@
+{
+  "repetidos_train_test": 3,
+  "misma_etiqueta_en_train_y_test": 2,
+  "filas_de_test_repetidas_en_train": 3,
+  "acertadas_por_el_baseline_oficial": 1
+}
