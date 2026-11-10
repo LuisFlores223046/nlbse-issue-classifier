@@ -6,5 +6,6 @@ El profesor pide documentar el uso de IA y **contrastarlo con evidencia**. Una f
 |---|---|---|---|---|---|---|
 | 04-nov | Luis | Claude | Planeación, guías y esqueleto del repo | Plan, guías, código base | Se ejecutó el pipeline completo y 13 pruebas pasaron; datos verificados contra el repo oficial | Se adoptó; ajustes del equipo en PRs |
 | 05-nov | Rogelio | Claude | Script de pandas para contar hallazgos y redacción de data/README.md| Script de conteo, tabla de hallazgos, párrafo "Por qué este dataset" e interpretación | Números obtenidos corriendo el script en mi PC y con un conteo extra | Se aceptó la tabla; se corrigió "duplicado exacto" a "duplicado por contenido" |
+| 09-nov | Evelyn | Claude | Dar formato IEEE a las referencias del reporte | Lista de 10 referencias en IEEE con autores, títulos, años y DOI | Se abrió la página de cada referencia y se compararon autores, título y año| Se aceptó el formato; se corrigió la autoría de [1] (incluía a "Izadi", que no aparece en la fuente) |
 
 Reglas: nada de IA presentado como resultado experimental · toda cifra sale de un JSON de `reports/metrics` · toda referencia se abre y se comprueba.
