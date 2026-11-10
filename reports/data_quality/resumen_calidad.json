@@ -1,0 +1,147 @@
+{
+  "train_antes": {
+    "archivo": "issues_train.csv",
+    "filas": 1500,
+    "nulos_por_columna": {
+      "repo": 0,
+      "created_at": 0,
+      "label": 0,
+      "title": 0,
+      "body": 0
+    },
+    "duplicados_exactos": 1,
+    "conteo_repo_label": {
+      "bitcoin/bitcoin|bug": 100,
+      "bitcoin/bitcoin|feature": 100,
+      "bitcoin/bitcoin|question": 100,
+      "facebook/react|bug": 100,
+      "facebook/react|feature": 100,
+      "facebook/react|question": 100,
+      "microsoft/vscode|bug": 100,
+      "microsoft/vscode|feature": 100,
+      "microsoft/vscode|question": 100,
+      "opencv/opencv|bug": 100,
+      "opencv/opencv|feature": 100,
+      "opencv/opencv|question": 100,
+      "tensorflow/tensorflow|bug": 100,
+      "tensorflow/tensorflow|feature": 100,
+      "tensorflow/tensorflow|question": 100
+    },
+    "longitud_body_mediana": 1091.0,
+    "longitud_body_max": 207777
+  },
+  "train_duplicados_quitados": 1,
+  "train_despues": {
+    "archivo": "train_clean.csv",
+    "filas": 1499,
+    "nulos_por_columna": {
+      "repo": 0,
+      "created_at": 0,
+      "label": 0,
+      "title": 0,
+      "body": 0,
+      "text": 0
+    },
+    "duplicados_exactos": 0,
+    "conteo_repo_label": {
+      "bitcoin/bitcoin|bug": 100,
+      "bitcoin/bitcoin|feature": 99,
+      "bitcoin/bitcoin|question": 100,
+      "facebook/react|bug": 100,
+      "facebook/react|feature": 100,
+      "facebook/react|question": 100,
+      "microsoft/vscode|bug": 100,
+      "microsoft/vscode|feature": 100,
+      "microsoft/vscode|question": 100,
+      "opencv/opencv|bug": 100,
+      "opencv/opencv|feature": 100,
+      "opencv/opencv|question": 100,
+      "tensorflow/tensorflow|bug": 100,
+      "tensorflow/tensorflow|feature": 100,
+      "tensorflow/tensorflow|question": 100
+    },
+    "longitud_body_mediana": 619.0,
+    "longitud_body_max": 41184
+  },
+  "train_validacion": {
+    "filas_ok": true,
+    "sin_nulos_en_title_body_text": true,
+    "etiquetas_validas": true,
+    "repos_validos": true,
+    "sin_urls_ni_comentarios_html": true,
+    "issues_con_texto_vacio": 1,
+    "sin_duplicados_exactos": true
+  },
+  "test_antes": {
+    "archivo": "issues_test.csv",
+    "filas": 1500,
+    "nulos_por_columna": {
+      "repo": 0,
+      "created_at": 0,
+      "label": 0,
+      "title": 0,
+      "body": 2
+    },
+    "duplicados_exactos": 0,
+    "conteo_repo_label": {
+      "bitcoin/bitcoin|bug": 100,
+      "bitcoin/bitcoin|feature": 100,
+      "bitcoin/bitcoin|question": 100,
+      "facebook/react|bug": 100,
+      "facebook/react|feature": 100,
+      "facebook/react|question": 100,
+      "microsoft/vscode|bug": 100,
+      "microsoft/vscode|feature": 100,
+      "microsoft/vscode|question": 100,
+      "opencv/opencv|bug": 100,
+      "opencv/opencv|feature": 100,
+      "opencv/opencv|question": 100,
+      "tensorflow/tensorflow|bug": 100,
+      "tensorflow/tensorflow|feature": 100,
+      "tensorflow/tensorflow|question": 100
+    },
+    "longitud_body_mediana": 1120.5,
+    "longitud_body_max": 61610
+  },
+  "test_duplicados_quitados": 0,
+  "test_despues": {
+    "archivo": "test_clean.csv",
+    "filas": 1500,
+    "nulos_por_columna": {
+      "repo": 0,
+      "created_at": 0,
+      "label": 0,
+      "title": 0,
+      "body": 0,
+      "text": 0
+    },
+    "duplicados_exactos": 1,
+    "conteo_repo_label": {
+      "bitcoin/bitcoin|bug": 100,
+      "bitcoin/bitcoin|feature": 100,
+      "bitcoin/bitcoin|question": 100,
+      "facebook/react|bug": 100,
+      "facebook/react|feature": 100,
+      "facebook/react|question": 100,
+      "microsoft/vscode|bug": 100,
+      "microsoft/vscode|feature": 100,
+      "microsoft/vscode|question": 100,
+      "opencv/opencv|bug": 100,
+      "opencv/opencv|feature": 100,
+      "opencv/opencv|question": 100,
+      "tensorflow/tensorflow|bug": 100,
+      "tensorflow/tensorflow|feature": 100,
+      "tensorflow/tensorflow|question": 100
+    },
+    "longitud_body_mediana": 636.5,
+    "longitud_body_max": 40028
+  },
+  "test_validacion": {
+    "filas_ok": true,
+    "sin_nulos_en_title_body_text": true,
+    "etiquetas_validas": true,
+    "repos_validos": true,
+    "sin_urls_ni_comentarios_html": false,
+    "issues_con_texto_vacio": 1
+  }
+}
