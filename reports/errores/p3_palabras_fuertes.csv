@@ -1,0 +1,151 @@
+repo,clase,palabra,peso
+bitcoin/bitcoin,bug,codeblock,1.109
+bitcoin/bitcoin,bug,py,0.763
+bitcoin/bitcoin,bug,failure in,0.541
+bitcoin/bitcoin,bug,failure,0.52
+bitcoin/bitcoin,bug,intermittent,0.496
+bitcoin/bitcoin,bug,master,0.46
+bitcoin/bitcoin,bug,py url,0.435
+bitcoin/bitcoin,bug,crash,0.412
+bitcoin/bitcoin,bug,in,0.409
+bitcoin/bitcoin,bug,transient,0.409
+bitcoin/bitcoin,feature,describe,0.847
+bitcoin/bitcoin,feature,would,0.687
+bitcoin/bitcoin,feature,be,0.615
+bitcoin/bitcoin,feature,feature,0.591
+bitcoin/bitcoin,feature,would be,0.582
+bitcoin/bitcoin,feature,like,0.566
+bitcoin/bitcoin,feature,your,0.542
+bitcoin/bitcoin,feature,that,0.512
+bitcoin/bitcoin,feature,it would,0.503
+bitcoin/bitcoin,feature,solution,0.481
+bitcoin/bitcoin,question,why,0.659
+bitcoin/bitcoin,question,my,0.648
+bitcoin/bitcoin,question,bitcoin,0.648
+bitcoin/bitcoin,question,version,0.517
+bitcoin/bitcoin,question,does,0.508
+bitcoin/bitcoin,question,compile,0.503
+bitcoin/bitcoin,question,what,0.444
+bitcoin/bitcoin,question,how,0.436
+bitcoin/bitcoin,question,18,0.429
+bitcoin/bitcoin,question,am,0.429
+facebook/react,bug,automated,1.228
+facebook/react,bug,devtools,1.047
+facebook/react,bug,error,0.999
+facebook/react,bug,18,0.828
+facebook/react,bug,stack automated,0.745
+facebook/react,bug,response_,0.71
+facebook/react,bug,automated _no,0.71
+facebook/react,bug,_no,0.71
+facebook/react,bug,_no response_,0.71
+facebook/react,bug,stack,0.669
+facebook/react,feature,feature,0.757
+facebook/react,feature,would,0.675
+facebook/react,feature,be,0.577
+facebook/react,feature,bug feature,0.522
+facebook/react,feature,for,0.51
+facebook/react,feature,would be,0.505
+facebook/react,feature,request,0.505
+facebook/react,feature,is the,0.484
+facebook/react,feature,support,0.47
+facebook/react,feature,of,0.462
+facebook/react,question,state,0.585
+facebook/react,question,question,0.56
+facebook/react,question,why,0.463
+facebook/react,question,am,0.431
+facebook/react,question,array,0.414
+facebook/react,question,componentdidmount,0.413
+facebook/react,question,data,0.407
+facebook/react,question,has,0.386
+facebook/react,question,and,0.38
+facebook/react,question,setstate,0.37
+microsoft/vscode,bug,image url,0.736
+microsoft/vscode,bug,testing,0.709
+microsoft/vscode,bug,url,0.571
+microsoft/vscode,bug,image,0.525
+microsoft/vscode,bug,window,0.514
+microsoft/vscode,bug,scroll,0.463
+microsoft/vscode,bug,height,0.453
+microsoft/vscode,bug,task,0.449
+microsoft/vscode,bug,09,0.41
+microsoft/vscode,bug,on,0.389
+microsoft/vscode,feature,would,0.767
+microsoft/vscode,feature,be,0.677
+microsoft/vscode,feature,support,0.671
+microsoft/vscode,feature,to,0.597
+microsoft/vscode,feature,if,0.584
+microsoft/vscode,feature,this,0.584
+microsoft/vscode,feature,feature,0.529
+microsoft/vscode,feature,for,0.475
+microsoft/vscode,feature,diff,0.475
+microsoft/vscode,feature,they,0.465
+microsoft/vscode,question,code,0.784
+microsoft/vscode,question,version,0.77
+microsoft/vscode,question,br,0.615
+microsoft/vscode,question,10,0.535
+microsoft/vscode,question,vs code,0.504
+microsoft/vscode,question,vs,0.499
+microsoft/vscode,question,enabled br,0.481
+microsoft/vscode,question,my,0.475
+microsoft/vscode,question,details,0.464
+microsoft/vscode,question,enabled,0.462
+opencv/opencv,bug,fixed,0.753
+opencv/opencv,bug,fix,0.716
+opencv/opencv,bug,resolves,0.494
+opencv/opencv,bug,test,0.484
+opencv/opencv,bug,layer,0.434
+opencv/opencv,bug,the issue,0.413
+opencv/opencv,bug,issue,0.411
+opencv/opencv,bug,typing,0.399
+opencv/opencv,bug,missing,0.376
+opencv/opencv,bug,backport,0.369
+opencv/opencv,feature,support,1.079
+opencv/opencv,feature,add,0.891
+opencv/opencv,feature,motivation,0.461
+opencv/opencv,feature,feature and,0.437
+opencv/opencv,feature,and motivation,0.437
+opencv/opencv,feature,context _no,0.431
+opencv/opencv,feature,support for,0.414
+opencv/opencv,feature,additional context,0.411
+opencv/opencv,feature,context,0.411
+opencv/opencv,feature,ffmpeg,0.407
+opencv/opencv,question,how,0.724
+opencv/opencv,question,how to,0.673
+opencv/opencv,question,information version,0.543
+opencv/opencv,question,version opencv,0.436
+opencv/opencv,question,image,0.427
+opencv/opencv,question,am,0.421
+opencv/opencv,question,opencv operating,0.333
+opencv/opencv,question,to build,0.328
+opencv/opencv,question,me,0.324
+opencv/opencv,question,cv2,0.313
+tensorflow/tensorflow,bug,bug have,1.175
+tensorflow/tensorflow,bug,type bug,1.048
+tensorflow/tensorflow,bug,bug,1.021
+tensorflow/tensorflow,bug,tensorflow nightly,0.763
+tensorflow/tensorflow,bug,with tensorflow,0.755
+tensorflow/tensorflow,bug,behavior,0.653
+tensorflow/tensorflow,bug,current behavior,0.647
+tensorflow/tensorflow,bug,13,0.592
+tensorflow/tensorflow,bug,12,0.533
+tensorflow/tensorflow,bug,reproduced the,0.484
+tensorflow/tensorflow,feature,feature,1.568
+tensorflow/tensorflow,feature,request,1.293
+tensorflow/tensorflow,feature,feature request,1.245
+tensorflow/tensorflow,feature,type feature,1.037
+tensorflow/tensorflow,feature,request source,0.726
+tensorflow/tensorflow,feature,request have,0.707
+tensorflow/tensorflow,feature,summary,0.494
+tensorflow/tensorflow,feature,documentation feature,0.434
+tensorflow/tensorflow,feature,are,0.418
+tensorflow/tensorflow,feature,the current,0.407
+tensorflow/tensorflow,question,type support,1.4
+tensorflow/tensorflow,question,support have,1.124
+tensorflow/tensorflow,question,support,0.962
+tensorflow/tensorflow,question,support source,0.535
+tensorflow/tensorflow,question,with tf,0.468
+tensorflow/tensorflow,question,tflite,0.432
+tensorflow/tensorflow,question,behaviour codeblock,0.426
+tensorflow/tensorflow,question,details,0.399
+tensorflow/tensorflow,question,error,0.385
+tensorflow/tensorflow,question,tf nightly,0.385
