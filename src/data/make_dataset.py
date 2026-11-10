@@ -9,7 +9,10 @@ Se corre asi (desde la raiz del repo):
 Genera:
   data/processed/train_clean.csv
   data/processed/test_clean.csv
-  reports/data_quality/resumen_calidad.json   (conteos, nulos, duplicados)
+  reports/data_quality/resumen_calidad.json   (conteos, nulos, duplicados ANTES y DESPUES + validacion)
+
+Sigue los 5 pasos de la guia del profesor: 1 inspeccion, 2 deteccion, 3 decision,
+4 transformacion, 5 validacion (ver docs/decisiones_limpieza.md).
 """
 
 import json  # para guardar el resumen de calidad
@@ -55,6 +58,34 @@ def quality_summary(df, nombre):
     }
 
 
+def validate_clean(df, nombre, filas_esperadas):
+    """PASO 5 (validacion): comprueba el DataFrame DESPUES de limpiar.
+
+    Entrada : df limpio (con columna `text`), nombre ("train"/"test") y filas esperadas.
+    Salida  : diccionario con cada comprobacion (True/False) y datos de apoyo.
+    Por que : la guia pide verificar que la limpieza no introdujo errores:
+              comparar filas antes/despues y revisar nulos y duplicados que queden.
+    Si falla algo critico (nulos, etiquetas raras, filas inesperadas) lanza ValueError.
+    """
+    comprobaciones = {
+        "filas_ok": bool(len(df) == filas_esperadas),
+        "sin_nulos_en_title_body_text": bool(df[["title", "body", "text"]].isna().sum().sum() == 0),
+        "etiquetas_validas": bool(set(df["label"]) <= set(LABELS)),
+        "repos_validos": bool(set(df["repo"]) <= set(REPOS)),
+        "sin_urls_ni_comentarios_html": bool(
+            not df["text"].str.contains(r"https?://|<!--", regex=True).any()),
+        "issues_con_texto_vacio": int((df["text"].str.replace(".", "", regex=False).str.strip() == "").sum()),
+    }
+    if nombre == "train":  # solo train se deduplica (protocolo: el test no se toca)
+        comprobaciones["sin_duplicados_exactos"] = bool(
+            not df.duplicated(subset=["repo", "title", "body"]).any())
+    criticas = ["filas_ok", "sin_nulos_en_title_body_text", "etiquetas_validas", "repos_validos"]
+    malas = [c for c in criticas if not comprobaciones[c]]
+    if malas:
+        raise ValueError(f"Validacion fallida en {nombre}: {malas}")
+    return comprobaciones
+
+
 def main():
     DATA_PROCESSED.mkdir(parents=True, exist_ok=True)
     QUALITY_DIR.mkdir(parents=True, exist_ok=True)
@@ -67,6 +98,9 @@ def main():
         # OJO: al test NO le quitamos filas (protocolo NLBSE: no remuestrear el test).
         df = clean_dataframe(df)                              # 3) limpiar texto
         resumen[f"{nombre}_duplicados_quitados"] = quitados
+        resumen[f"{nombre}_despues"] = quality_summary(df, f"{nombre}_clean.csv")  # 5) medir DESPUES
+        filas_antes = resumen[f"{nombre}_antes"]["filas"]
+        resumen[f"{nombre}_validacion"] = validate_clean(df, nombre, filas_antes - quitados)
         salida = DATA_PROCESSED / f"{nombre}_clean.csv"
         df.to_csv(salida, index=False)                        # 4) guardar
         print(f"[OK] {salida.name}: {len(df)} filas ({quitados} duplicados quitados)")
