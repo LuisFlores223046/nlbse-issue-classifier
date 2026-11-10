@@ -22,4 +22,13 @@ Formato: una entrada por decisión importante. Responde: ¿qué se decidió, por
 - 2 `body` vacíos en test → se tratan como texto vacío (solo título).
 - Plantillas de issues (React: "### Repro steps"…) → posible fuga; Gabriel mide el efecto.
 
+## D-005 · Baseline oficial (Sebastián completa)
+- **Decisión:** el baseline oficial es la corrida de `run_all` con `C=1` (valid 0.7294, test 0.7402, 5-nov-2026).
+- **Por qué:** el test ya se evaluó una vez con esa configuración; cualquier otro ajuste se reporta como modelo aparte (`--tag`).
+- **Pendiente de Sebastián:** explicar qué hace TF-IDF, qué es `C` y por qué un clasificador por repo.
+
+## D-006 · Predicciones fuera de git
+- **Decisión:** `reports/errores/pred_*.csv` no se versionan.
+- **Por qué:** contienen títulos del dataset y la licencia original está vacía.
+
 <!-- Copia el bloque D-00X para cada decisión nueva. -->
