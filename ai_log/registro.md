@@ -6,5 +6,6 @@ El profesor pide documentar el uso de IA y **contrastarlo con evidencia**. Una f
 |---|---|---|---|---|---|---|
 | 04-nov | Luis | Claude | Planeación, guías y esqueleto del repo | Plan, guías, código base | Se ejecutó el pipeline completo y 13 pruebas pasaron; datos verificados contra el repo oficial | Se adoptó; ajustes del equipo en PRs |
 | 05-nov | Rogelio | Claude | Script de pandas para contar hallazgos y redacción de data/README.md| Script de conteo, tabla de hallazgos, párrafo "Por qué este dataset" e interpretación | Números obtenidos corriendo el script en mi PC y con un conteo extra | Se aceptó la tabla; se corrigió "duplicado exacto" a "duplicado por contenido" |
+| 09-nov | Rogelio | Claude | corregir `decisiones_limpieza.md` | Comandos git/bash y correcciones al documento | make_dataset, eda, experimento (F1 0.7294 igual) y pytest (12 pasan) | Se adoptó; tablas re-verificadas en mi PC |
 
 Reglas: nada de IA presentado como resultado experimental · toda cifra sale de un JSON de `reports/metrics` · toda referencia se abre y se comprueba.
