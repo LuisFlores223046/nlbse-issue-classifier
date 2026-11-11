@@ -8,11 +8,19 @@
 ## 1. Qué es el proyecto
 - Proyecto final de **Tópicos Selectos de Ingeniería de Software** (UACJ, 9º semestre). Equipo de 5: **Luis** (coordinación, repo, API), **Rogelio** (datos y limpieza), **Sebastián** (modelos), **Gabriel** (analítica, métricas, calidad), **Evelyn** (documentación, trazabilidad, reporte).
 - Tema: **clasificar issues de GitHub en `bug` / `feature` / `question`** con aprendizaje automático, usando el dataset oficial **NLBSE'24** (5 repos: facebook/react, tensorflow/tensorflow, microsoft/vscode, bitcoin/bitcoin, opencv/opencv). Además: análisis de errores (analítica de software) y un prototipo **FastAPI**.
-- Fechas: arranque 4-nov-2026; entrega **lunes 16-nov** (por confirmar; meta interna: terminar el **domingo 15**). Calendario en `guias/06_Calendario_dia_por_dia.md`.
+- Fechas: arranque 4-nov-2026; entrega **miércoles 11-nov-2026** (fijada por el profesor). Meta interna: todo terminado el **martes 10 a las 22:00**; resultados congelados el **lunes 9 a las 20:00**. Calendario en `guias/06_Calendario_dia_por_dia.md`.
 - **Lo que más valora el profesor: la TRAZABILIDAD** (poder seguir cada requisito hasta su código, prueba, resultado y sección del reporte), el uso honesto de fuentes y de IA, y que las conclusiones salgan de evidencia real.
 
-## 1b. La rúbrica del profesor (la guía oficial manda)
-Se evalúa con 5 criterios: (1) planteamiento y fundamentos (Unidad I, incluye análisis bibliométrico); (2) procesamiento y ciencia de datos (Unidad II, Big Data y ML); (3) analítica de software y requerimientos (Unidad III); (4) código, modelado y prototipado; (5) gestión, trazabilidad y versiones. Cada requisito de `docs/trazabilidad.md` (R01-R20) está ligado a uno de ellos. La entrega final es: código y repositorio, reporte técnico final y presentación/defensa. Además se pide documentar el uso de IA en las etapas de evaluación de modelos y de analítica.
+## 1b. Qué pide el profesor (SOLO estas tres fuentes: el aviso, la guía HTML y el reporte de ejemplo)
+- **Estructura del reporte (aviso §3):** Cap. 1 Introducción · Cap. 2 Marco teórico y revisión de la literatura · Cap. 3 Metodología y desarrollo técnico · Cap. 4 Implementación, análisis y resultados · Cap. 5 Conclusiones y trabajo futuro · Referencias · Anexos. Plantilla: `reporte/plantilla_reporte.md`. El estilo se toma del reporte de ejemplo (`bookdown-demo.pdf`): secciones numeradas, código explicado, figuras con pie, conclusiones por integrante.
+- **Código (aviso §4):** cada función/procedimiento importante se explica con 6 puntos: objetivo, entradas, cómo funciona, salidas, por qué así, cómo contribuye al objetivo. Ver `docs/explicacion_codigo.md`.
+- **Resultados (aviso §5):** cada tabla/figura con título descriptivo, explicación e interpretación. **No inventar** resultados, métricas, pruebas, datos ni afirmaciones.
+- **Fuentes e IA (aviso §6):** referencias confiables y verificables; la IA se puede usar pero se **documenta** y se **contrasta** con evidencia; nunca como resultado experimental ni como fuente verificada.
+- **Calidad (aviso §7):** ver `docs/checklist_calidad.md`.
+- **Guía oficial (aviso §8):** el aviso dice que además hay que cumplir la guía oficial de la materia (pruebas, control de versiones, presentación final, etc.). Aquí **solo** se trabaja con las tres fuentes de arriba; lo que dependa de la guía oficial se pregunta al profesor (guía 08) y mientras tanto se marca como opcional.
+- **Limpieza (guía HTML §2):** pasos inspección → detección → decisión → transformación → validación, y 6 puntos documentados (fuente, diagnóstico, procedimiento, herramientas y código, antes/después, validación). Ver `docs/decisiones_limpieza.md`.
+- **Ficha de 10 preguntas (guía HTML §5):** `reporte/ficha_10_preguntas.md`.
+- **El profesor dijo: "el mayor enfoque es trazabilidad".**
 
 ## 2. Datos (hechos verificados el 4-nov-2026 — no los "corrijas" de memoria)
 - Columnas REALES del CSV: `repo, created_at, label, title, body` (el README oficial dice otros nombres; **el CSV manda**).
@@ -69,7 +77,7 @@ Entorno: Windows, PowerShell, **Python 3.11**, `.venv`.
 - No hagas refactors masivos, no renombres archivos/carpetas, no cambies versiones de dependencias, no agregues librerías pesadas sin avisar y justificar.
 - No uses `git push --force`, no trabajes directo en `main`, no borres historial ni ramas ajenas.
 - No ejecutes comandos destructivos (`rm -rf`, `git reset --hard`, `del /s`) sin que el usuario lo confirme explícitamente.
-- No cambies resultados después del **martes 10-nov** (congelamiento): después de esa fecha solo texto/documentación.
+- No cambies resultados después del **lunes 9-nov a las 20:00** (congelamiento): después de esa fecha solo texto/documentación.
 - No "rellenes" secciones del reporte con texto genérico: si falta evidencia, deja un `TODO:` explícito.
 
 ### Si dudas
@@ -81,7 +89,7 @@ Pregunta al usuario. Si el usuario te pide algo que contradice estas reglas, exp
 3. Commits pequeños: `tipo: descripción corta` (ej. `fix: manejar body vacío en clean_text`).
 4. Push de la rama → Pull Request con la plantilla (`Closes #n`, requisito `R__`) → revisión del par → merge.
 5. Revisión cruzada: Sebastián↔Luis · Rogelio↔Gabriel · Evelyn revisada por Gabriel.
-6. Tags de versión: v0.1 (jue 5) · v0.2 (sáb 7) · v0.3 (mar 10) · v0.4 (mié 11) · v0.9 (jue 12) · v1.0 (dom 15).
+6. Tags de versión: v0.1 (jue 5) · v0.2 (sáb 7) · v0.3 (lun 9, 20:00) · v0.9 (mar 10, 22:00) · v1.0 (mié 11, entrega).
 
 ## 7. Documentar el uso de IA (obligatorio)
 Cada uso relevante = una fila en `ai_log/registro.md`. Al final de tu respuesta, ofrece esta fila ya redactada para que el humano la pegue:
@@ -91,10 +99,10 @@ Cada uso relevante = una fila en `ai_log/registro.md`. Al final de tu respuesta,
 Recuérdale al usuario **verificar** antes de aceptar (correr `pytest -q`, comparar con el JSON, abrir la fuente).
 
 ## 8. Trazabilidad (cómo ayudar a Evelyn y a todos)
-Cada tarea se liga a un requisito de `docs/trazabilidad.md` (R01…R16): requisito → issue → PR → archivo → prueba/evidencia → sección del reporte. Cuando termines algo, indica qué fila de la matriz se actualiza y con qué datos.
+Cada tarea se liga a un requisito de `docs/trazabilidad.md` (R01…R22): requisito → issue → PR → archivo → prueba/evidencia → sección del reporte. Cuando termines algo, indica qué fila de la matriz se actualiza y con qué datos.
 
 ## 9. Estilo del reporte (si ayudas a redactar)
-- 5 capítulos (Introducción; Marco teórico; Metodología y desarrollo; Implementación, análisis y resultados; Conclusiones) + Referencias + Anexos. Plantilla en `reporte/plantilla_reporte.md`.
+- 5 capítulos (Introducción; Marco teórico; Metodología y desarrollo; Implementación, análisis y resultados; Conclusiones) + Referencias + Anexos. Plantilla en `reporte/plantilla_reporte.md`, con tabla de quién redacta cada parte y subsección de conclusiones por integrante.
 - Redacción académica, clara, terminología consistente, secciones numeradas.
 - Cada fragmento de código explicado: objetivo, entradas, proceso, salidas, por qué así, cómo aporta al objetivo.
 - Cada tabla/figura: título descriptivo + explicación + **interpretación** (qué significa, no solo qué se ve).
@@ -102,7 +110,7 @@ Cada tarea se liga a un requisito de `docs/trazabilidad.md` (R01…R16): requisi
 - Español neutro/mexicano, natural; sin relleno ni frases de "marketing".
 
 ## 10. Cosas aún sin confirmar con el profesor (no las asumas)
-Fecha exacta de entrega (¿lunes 16 es feriado?), si exige Big Data o análisis bibliométrico, formato de citación (se usa APA 7 provisional), tecnologías obligatorias (¿React/Django?), qué es la "Unidad V".
+Hora y medio de entrega (PDF, enlace al repo, presentación), si hay presentación y su duración, formato de citación (se usa IEEE), y si la guía oficial exige algo que no aparezca en el aviso (bibliometría, Big Data, arquitectura web). Ver `guias/08_Mensaje_al_profesor.md`.
 
 ## 11. Resumen en 8 líneas (si solo vas a recordar esto)
 1. Clasificamos issues GitHub (bug/feature/question), dataset NLBSE'24, 5 repos.

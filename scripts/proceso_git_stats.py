@@ -1,8 +1,8 @@
 """
 proceso_git_stats.py  (responsable: Gabriel)
 ============================================
-ANALITICA DE NUESTRO PROPIO PROCESO (rubrica, criterio 3: "analitica de requerimientos y
-procesos" y trazabilidad). Lee el historial de git y calcula metricas del equipo:
+ANALITICA DE NUESTRO PROPIO PROCESO (opcional; apoya la trazabilidad; tema: analitica de requerimientos y
+procesos y trazabilidad). Lee el historial de git y calcula metricas del equipo:
   - commits por persona y por dia
   - archivos tocados por persona
 Genera CSV en reports/proceso/ que se interpretan en el reporte (Cap. 4).

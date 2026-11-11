@@ -1,6 +1,6 @@
 # Requisitos del prototipo (Gabriel y Luis)
 
-Rúbrica, criterio 3: "analítica de requerimientos y procesos". Aquí se listan los requisitos del sistema
+Opcional (apoya la trazabilidad; no lo exige el aviso). Tema: analítica de requerimientos y procesos. Aquí se listan los requisitos del sistema
 y se evalúa si cada uno se cumplió, con evidencia.
 
 ## Funcionales

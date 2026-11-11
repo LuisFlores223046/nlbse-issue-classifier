@@ -8,7 +8,7 @@ TF-IDF global. Esta variante usa:
   * HashingVectorizer: convierte texto en numeros SIN guardar vocabulario (memoria constante).
   * SGDClassifier + partial_fit: aprende por LOTES (chunks), viendo pocos datos a la vez.
 Con 1 500 issues no hace falta, pero demostramos la tecnica y medimos su costo/beneficio
-contra el baseline (rubrica: "tecnicas de Big Data y aprendizaje automatico", temas 2.2 y 2.4).
+contra el baseline (tecnica escalable tipo Big Data: memoria constante por lotes).
 
 Uso (desde la raiz del repo):
     python -m src.models.scalable_sgd --split valid

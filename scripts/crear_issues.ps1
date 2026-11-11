@@ -1,4 +1,5 @@
-# crear_issues.ps1 - Crea los 20 issues con GitHub CLI.
+# crear_issues.ps1 - Crea los 22 issues con GitHub CLI.
+# OJO: si ya creaste #1-#20 a mano, NO corras todo el script (duplicaria issues): copia solo los bloques de R21 y R22.
 # Requisitos: instalar gh (https://cli.github.com) y correr `gh auth login` una vez.
 # Uso (dentro de la carpeta del repo clonado):  .\crear_issues.ps1
 $ErrorActionPreference = 'Stop'
@@ -55,7 +56,8 @@ gh issue create --title 'R04 Limpieza con pruebas' --label 'datos' --body @'
 **Qué hay que hacer**
 - Ampliar src/data/clean.py si hace falta
 - Agregar al menos 10 pruebas en tests/test_clean.py
-- Llenar docs/decisiones_limpieza.md con números reales
+- Verificar docs/decisiones_limpieza.md (6 puntos de la guía del profesor) con números reales
+- Correr scripts/experimento_limpieza.py y escribir la lectura con tus palabras
 
 **Criterio de terminado (verificable)**
 - [ ] 10 o más pruebas verdes y decisiones documentadas
@@ -95,7 +97,7 @@ gh issue create --title 'R06 Baseline TF-IDF + regresión logística' --label 'm
 gh issue create --title 'R07 Segundo modelo y comparación' --label 'modelos' --body @'
 **Requisito:** R07 (ver docs/trazabilidad.md)
 
-**Responsable:** Sebastián  **Revisor:** Luis  **Fecha límite:** mar 10-nov
+**Responsable:** Sebastián  **Revisor:** Luis  **Fecha límite:** lun 9-nov
 
 **Qué hay que hacer**
 - Evaluar src/models/scalable_sgd.py (HashingVectorizer + SGD por lotes): valid y luego test una vez
@@ -124,7 +126,7 @@ gh issue create --title 'R08 Métricas del protocolo NLBSE' --label 'analitica' 
 gh issue create --title 'R09 Análisis de errores (7 preguntas de analítica)' --label 'analitica' --body @'
 **Requisito:** R09 (ver docs/trazabilidad.md)
 
-**Responsable:** Gabriel  **Revisor:** Rogelio  **Fecha límite:** mar 10-nov
+**Responsable:** Gabriel  **Revisor:** Rogelio  **Fecha límite:** lun 9-nov
 
 **Qué hay que hacer**
 - Crear notebooks/02_analisis_errores.ipynb
@@ -152,7 +154,7 @@ gh issue create --title 'R10 API FastAPI' --label 'api' --body @'
 gh issue create --title 'R11 Pruebas completas' --label 'api' --body @'
 **Requisito:** R11 (ver docs/trazabilidad.md)
 
-**Responsable:** Luis  **Revisor:** Gabriel  **Fecha límite:** mar 10-nov
+**Responsable:** Luis  **Revisor:** Gabriel  **Fecha límite:** lun 9-nov
 
 **Qué hay que hacer**
 - Ampliar tests/test_api.py (body vacío, texto largo)
@@ -166,10 +168,10 @@ gh issue create --title 'R11 Pruebas completas' --label 'api' --body @'
 gh issue create --title 'R12 Control de versiones y tags' --label 'git' --body @'
 **Requisito:** R12 (ver docs/trazabilidad.md)
 
-**Responsable:** Luis  **Revisor:** Evelyn  **Fecha límite:** dom 15-nov
+**Responsable:** Luis  **Revisor:** Evelyn  **Fecha límite:** mié 11-nov
 
 **Qué hay que hacer**
-- Crear tags v0.1, v0.2, v0.3, v0.4, v0.9, v1.0 en sus fechas
+- Crear tags v0.1 (jue 5), v0.2 (sáb 7), v0.3 (lun 9 20:00), v0.9 (mar 10 22:00) y v1.0 (mié 11) en sus fechas
 - Verificar que todos los PR tienen revisión y Closes #n
 
 **Criterio de terminado (verificable)**
@@ -180,12 +182,12 @@ gh issue create --title 'R12 Control de versiones y tags' --label 'git' --body @
 gh issue create --title 'R13 Registro de uso de IA' --label 'docs' --body @'
 **Requisito:** R13 (ver docs/trazabilidad.md)
 
-**Responsable:** Todos  **Revisor:** Evelyn  **Fecha límite:** jue 12-nov
+**Responsable:** Todos  **Revisor:** Evelyn  **Fecha límite:** lun 9-nov
 
 **Qué hay que hacer**
 - Anotar cada uso relevante de IA en ai_log/registro.md
 - Verificar y contrastar lo que devolvió la IA
-- Evelyn compila 2 secciones breves del reporte: IA para revisar/depurar el preprocesamiento y los modelos (Cap. 3.8) e IA para extraer/validar la analítica (Cap. 4.4)
+- Evelyn redacta el Cap. 3.8: uso de IA por actividad (qué se pidió, qué devolvió, cómo se contrastó con evidencia)
 
 **Criterio de terminado (verificable)**
 - [ ] Registro completo, una fila por uso relevante
@@ -195,10 +197,11 @@ gh issue create --title 'R13 Registro de uso de IA' --label 'docs' --body @'
 gh issue create --title 'R14 Reporte con los 5 capítulos' --label 'docs' --body @'
 **Requisito:** R14 (ver docs/trazabilidad.md)
 
-**Responsable:** Evelyn  **Revisor:** Gabriel  **Fecha límite:** jue 12-nov
+**Responsable:** Evelyn  **Revisor:** Gabriel  **Fecha límite:** mar 10-nov 22:00
 
 **Qué hay que hacer**
-- Redactar los capítulos 1 a 5 desde reporte/plantilla_reporte.md
+- Redactar y unir los capítulos 1 a 5, referencias y anexos desde reporte/plantilla_reporte.md (cada quien redacta su parte; ver tabla en la plantilla)
+- Agregar 5.6 conclusiones por integrante
 - Cifras solo desde reports/metrics
 
 **Criterio de terminado (verificable)**
@@ -209,7 +212,7 @@ gh issue create --title 'R14 Reporte con los 5 capítulos' --label 'docs' --body
 gh issue create --title 'R15 Referencias verificables' --label 'docs' --body @'
 **Requisito:** R15 (ver docs/trazabilidad.md)
 
-**Responsable:** Evelyn  **Revisor:** Gabriel  **Fecha límite:** sáb 14-nov
+**Responsable:** Evelyn  **Revisor:** Gabriel  **Fecha límite:** mar 10-nov
 
 **Qué hay que hacer**
 - Abrir cada DOI o URL de docs/referencias.md y comprobar datos
@@ -223,7 +226,7 @@ gh issue create --title 'R15 Referencias verificables' --label 'docs' --body @'
 gh issue create --title 'R16 Presentación y demo' --label 'docs' --body @'
 **Requisito:** R16 (ver docs/trazabilidad.md)
 
-**Responsable:** Luis y Evelyn  **Revisor:** Sebastián  **Fecha límite:** vie 13-nov
+**Responsable:** Luis y Evelyn  **Revisor:** Sebastián  **Fecha límite:** mar 10-nov
 
 **Qué hay que hacer**
 - Armar 8 a 10 diapositivas
@@ -237,7 +240,7 @@ gh issue create --title 'R16 Presentación y demo' --label 'docs' --body @'
 gh issue create --title 'R17 Análisis bibliométrico (rúbrica criterio 1)' --label 'docs' --body @'
 **Requisito:** R17 (ver docs/trazabilidad.md)
 
-**Responsable:** Evelyn  **Revisor:** Gabriel  **Fecha límite:** mié 11-nov
+**Responsable:** Evelyn  **Revisor:** Gabriel  **Fecha límite:** mar 10-nov (opcional)
 
 **Qué hay que hacer**
 - Reunir 12 a 20 trabajos sobre clasificación de issues/reportes (Google Scholar, OpenAlex o Semantic Scholar)
@@ -252,7 +255,7 @@ gh issue create --title 'R17 Análisis bibliométrico (rúbrica criterio 1)' --l
 gh issue create --title 'R18 Técnica escalable tipo Big Data (rúbrica criterio 2)' --label 'modelos' --body @'
 **Requisito:** R18 (ver docs/trazabilidad.md)
 
-**Responsable:** Sebastián  **Revisor:** Luis  **Fecha límite:** mar 10-nov
+**Responsable:** Sebastián  **Revisor:** Luis  **Fecha límite:** lun 9-nov
 
 **Qué hay que hacer**
 - Correr src/models/scalable_sgd.py en valid y, una vez, en test
@@ -267,7 +270,7 @@ gh issue create --title 'R18 Técnica escalable tipo Big Data (rúbrica criterio
 gh issue create --title 'R19 Analítica de requerimientos y de nuestro proceso (rúbrica criterio 3)' --label 'analitica' --body @'
 **Requisito:** R19 (ver docs/trazabilidad.md)
 
-**Responsable:** Gabriel  **Revisor:** Evelyn  **Fecha límite:** mié 11-nov
+**Responsable:** Gabriel  **Revisor:** Evelyn  **Fecha límite:** mar 10-nov (opcional)
 
 **Qué hay que hacer**
 - Correr scripts/proceso_git_stats.py y analizar commits por persona y por día
@@ -282,7 +285,7 @@ gh issue create --title 'R19 Analítica de requerimientos y de nuestro proceso (
 gh issue create --title 'R20 Optimización y pruebas de rendimiento (Tercer parcial, punto 3)' --label 'modelos' --body @'
 **Requisito:** R20 (ver docs/trazabilidad.md)
 
-**Responsable:** Sebastián y Luis  **Revisor:** Gabriel  **Fecha límite:** mar 10-nov
+**Responsable:** Sebastián y Luis  **Revisor:** Gabriel  **Fecha límite:** lun 9-nov (opcional)
 
 **Qué hay que hacer**
 - Sebastián: comparar class_weight None vs balanced y validación cruzada de 5 pliegues, documentar
@@ -293,4 +296,34 @@ gh issue create --title 'R20 Optimización y pruebas de rendimiento (Tercer parc
 - [ ] Tabla de ajustes con su efecto y latencia medida
 
 **Evidencia esperada** (archivo, prueba o métrica): docs/metricas.md, reports/metrics/*.json
+'@
+gh issue create --title 'R21 Explicación del código (6 puntos por función)' --label 'docs' --body @'
+**Requisito:** R21 (ver docs/trazabilidad.md)
+
+**Responsable:** Todos (Evelyn une)  **Revisor:** Gabriel  **Fecha límite:** lun 9-nov
+
+**Qué hay que hacer**
+- Cada quien reescribe con sus palabras las fichas de sus funciones en docs/explicacion_codigo.md: objetivo, entradas, cómo funciona, salidas, por qué, aporte
+- Poner 'Realizada por <nombre>' en cada ficha
+- Evelyn une todo en el Cap. 4.2
+
+**Criterio de terminado (verificable)**
+- [ ] Todas las funciones listadas con las 6 respuestas y revisadas
+
+**Evidencia esperada** (archivo, prueba o métrica): docs/explicacion_codigo.md, reporte/
+'@
+gh issue create --title 'R22 Checklist de calidad y revisión final' --label 'docs' --body @'
+**Requisito:** R22 (ver docs/trazabilidad.md)
+
+**Responsable:** Gabriel  **Revisor:** Evelyn  **Fecha límite:** mar 10-nov
+
+**Qué hay que hacer**
+- Evelyn llena docs/checklist_calidad.md contra el reporte completo
+- Gabriel verifica cada casilla (abre referencias, revisa figuras, comprueba que las cifras coinciden con los JSON)
+- Revisar el PDF final el miércoles 11
+
+**Criterio de terminado (verificable)**
+- [ ] Checklist completo y firmado por Gabriel
+
+**Evidencia esperada** (archivo, prueba o métrica): docs/checklist_calidad.md
 '@
