@@ -1,6 +1,6 @@
 # Análisis bibliométrico (Evelyn · revisa Gabriel)
 
-Rúbrica, criterio 1 (Unidad I). Objetivo: mostrar el panorama de trabajos sobre clasificación automática de issues/reportes de software.
+Opcional (solo si el profesor lo exige; el aviso no lo pide explícitamente). Objetivo: mostrar el panorama de trabajos sobre clasificación automática de issues/reportes de software.
 
 ## Cómo buscar (cada fuente se abre y se verifica)
 - Google Scholar: https://scholar.google.com — buscar "issue report classification", "GitHub issue classification", "bug report classification NLBSE".
